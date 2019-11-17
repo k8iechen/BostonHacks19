@@ -1,0 +1,16 @@
+{"class":"Syphilis", "sentence":"Patient had fevers and rashes that lasted two weeks."}
+{"class":"Syphilis", "sentence":"Patient has mild fever and sore throats."}
+{"class":"Syphilis", "sentence":"Patient has a sore throat and complained of rashes in vaginal area."}
+{"class":"Syphilis", "sentence":"Patient has muscle pains and oral sores."}
+{"class":"Syphilis", "sentence":"Patient has experienced hair loss and weight loss."}
+{"class":"Syphilis", "sentence":"Patient has viginal sores and anal sores."}
+{"class":"HIV", "sentence":"Patient has diarrhea and has experienced weight loss"}
+{"class":"HIV", "sentence":"Patient has joint pains and muscle aches"}
+{"class":"HIV", "sentence":"Patient has severe headache and vomited repeatedly."}
+{"class":"HIV", "sentence":"Patient experienced shortness of breath and chronic coughs"}
+{"class":"HIV", "sentence":"Patient has swollen lymph nodes and a sore throat"}
+{"class":"Tuberculosis", "sentence":"Patient was feverish and reported night sweats."}
+{"class":"Tuberculosis", "sentence":"Patient experienced chest pains and was coughing regularly for the past 2 years"}
+{"class":"Tuberculosis", "sentence":"Patient reported coughing up blood 4 days prior, and had trouble breathing this morning"}
+{"class":"Tuberculosis", "sentence":"Patient reported consistent fatigue and unintentional weightloss"}
+{"class":"Tuberculosis", "sentence":"Patient has pain when breathing and was coughing up blood"}
