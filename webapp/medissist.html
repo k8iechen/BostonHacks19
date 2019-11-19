@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js runner">
+<head>
+  <base href="https://fv45wbclcmatc43w.anvil.app/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="expires" content="0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="never"> <!-- Yes, this is "legacy", but Safari and Edge don't support 'no-referrer' yet -->
+
+  <meta name="og:title" content="BostonHacks2019">
+  <meta name="og:type" content="website">
+  <meta name="og:url" content="https://fv45wbclcmatc43w.anvil.app">
+  <meta name="og:image" content="https://anvil.works/img/logo-square-padded.png">
+  <!--<xmeta name="og:image:width" content="400">-->
+  <!--<xmeta name="og:image:height" content="400">-->
+  <!--<xmeta name="og:site_name" content="Anvil">-->
+  <meta name="og:description" content="This app is built with Anvil, the platform for building full-stack web apps quickly and robustly.">
+
+
+  <title>BostonHacks2019</title>
+
+  <link rel="stylesheet" href="https://anvil.works/runtime/css/bootstrap.css?buildTime=1573638946">
+  <link rel="stylesheet" href="https://anvil.works/ide/css/bootstrap-theme.min.css?buildTime=1573638946">
+  <link rel="stylesheet" href="https://anvil.works/runtime/css/runtime.css?buildTime=1573638946">
+  <link rel="stylesheet" href="https://anvil.works/runtime/css/daterangepicker.css" />
+  <link rel="stylesheet" href="https://anvil.works/ide/bower_components/animate.css/animate.min.css" />
+
+  <link rel="stylesheet" href="https://anvil.works/ide/css/font-awesome.min.css">
+
+  <!-- Favicon things -->
+
+  <link rel="icon" href="https://anvil.works/favicon-96x96.png">
+  <link rel="manifest" href="https://fv45wbclcmatc43w.anvil.app/_/manifest.json?buildTime=1573638946">
+  <meta name="apple-mobile-web-app-title" content="BostonHacks2019">
+  <meta name="application-name" content="BostonHacks2019">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="msapplication-TileImage" content="https://anvil.works/mstile-144x144.png">
+  <meta name="theme-color" content="#2ab1eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <style></style>
+  <style>body * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  margin: 0;
+  min-height: 100%;
+}
+
+body.anvil-show-banner #appGoesHere {
+    margin-top: 50px;
+    position: relative;
+}
+
+.body {
+  background-color: #d7d7d7;
+}
+
+a, a:visited {
+  color: #009688;
+}
+
+a:hover, a:active, a:focus {
+  color: #00796B; /* Material design: Teal 700 */
+}
+
+.placeholder {
+  padding: 5px;
+  border: 2px dashed #888;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  overflow-y: hidden;
+
+  text-transform: uppercase;
+  font-weight: bold;
+
+  box-shadow: 0 1px 3px #888;
+
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.nav-right {
+  float: right;
+  color: #333;
+}
+
+.nav-elt {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  position: relative;
+}
+
+.nav-elt.placeholder {
+  margin-top: 5px;
+  opacity: 0.8;
+  color: #888;
+  visibility: hidden;
+}
+
+body.anvil-highlight .nav-elt.placeholder {
+  visibility: visible;
+}
+
+.nav-elt .drop-here {
+  position: absolute;
+  top: 0;
+  left: -7.5px;
+  bottom: 0;
+  width: 5px;
+}
+
+.anvil-role-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.designer .instructions {
+    padding: 24px 16px;
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+}
+
+/* Give enough space for card drop-shadows */
+.cards > div > .column-panel > .anvil-panel-section > .anvil-panel-section-container {
+    padding: 0 5px;
+}
+
+.cards > .anvil-container {
+    outline: none !important;
+}
+
+.anvil-role-card,
+.designer .anvil-highlight .anvil-role-card {
+    background-color: white;
+    box-shadow: 1px 2px 4px #888;
+
+    font-weight: normal;
+    font-size: 14px;
+
+    outline: none;
+    padding: 15px 0;
+
+}
+  
+.anvil-role-card>.anvil-panel-section>.anvil-panel-section-container {
+    padding: 0 15px;
+}
+
+/* Responsive bits: Make the menu overlay the screen
+   (and hidden by default) rather than displacing it
+   on small screens
+*/
+
+@media(max-width:767px) {
+
+  .cards {
+    padding: 24px 0px;
+  }
+
+}
+
+
+/* From https://fonts.googleapis.com/css?family=Roboto */
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/u0TOpm082MNkS5K0Q4rhqvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}</style>
+
+  <script src="https://anvil.works/ide/js/lib/jquery.min.js?buildTime=1573638946"></script>
+  <script src="https://anvil.works/runtime/js/lib/jquery-migrate.min.js"></script>
+
+  
+</head>
+<body class="anvil-show-banner">
+<div id="anvil-header">
+  <a href="https://anvil.works/?utm_source=app_banner" target="_blank" class="cta"><span class="hidden-xs">Build web apps for free with</span><span class="visible-xs-inline">Built with</span> Anvil</a>
+  <a href="https://anvil.works/?utm_source=app_banner" target="_blank"><span class="hidden-xs">Built with </span><img src="https://anvil.works/ide/img/logo-35-white.png"></a>
+</div>
+
+<a id="anvil-badge" href="https://anvil.works/?utm_source=app_banner" target="_blank">
+  <img src="https://anvil.works/runtime/img/made-with-anvil.png">
+</a>
+
+<div class="anvil-root-container">
+  <div id="appGoesHere"></div>
+</div>
+
+<div id="loadingSpinner"></div>
+
+<!-- Alert modal -->
+
+<div id="alert-modal" class="modal fade">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title alert-title">Title</h4>
+      </div>
+      <div class="modal-body">
+        Body
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Session expired modal -->
+
+<div id="session-expired-modal" class="modal fade">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Session Expired</h4>
+      </div>
+      <div class="modal-body">
+        Your session has timed out. Please refresh the page to continue.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger refresh">Refresh Now</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- Google API log-in modal -->
+
+<div id="google-login-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Log in with Google</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are about to log in to this app with Google</p>
+      </div>
+      <div class="modal-footer">
+        <button id="googleCancelButton" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button id="googleLogInButton" type="button" class="btn btn-success" data-dismiss="modal">Log in</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Facebook API log-in modal -->
+
+<div id="facebook-login-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Log in with Facebook</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are about to log in to this app with Facebook</p>
+      </div>
+      <div class="modal-footer">
+        <button id="facebookCancelButton" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button id="facebookLogInButton" type="button" class="btn btn-success" data-dismiss="modal">Log in</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Microsoft log-in modal -->
+
+<div id="microsoft-login-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Log in with Microsoft</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are about to log in to this app with Microsoft</p>
+      </div>
+      <div class="modal-footer">
+        <button id="microsoftCancelButton" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button id="microsoftLogInButton" type="button" class="btn btn-success" data-dismiss="modal">Log in</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Raven log-in modal -->
+
+<div id="raven-login-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Log in with Raven</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are about to log in to this app with Raven</p>
+      </div>
+      <div class="modal-footer">
+        <button id="ravenCancelButton" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button id="ravenLogInButton" type="button" class="btn btn-success" data-dismiss="modal">Log in</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Stripe checkout modal -->
+
+<div id="stripe-checkout-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Pay Online</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are about to make an online payment.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button id="stripeContinue" type="button" class="btn btn-success" data-dismiss="modal">Continue to payment screen</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Kerberos Login modal -->
+
+<div id="kerberos-login-modal" class="modal fade">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Kerberos Authentication</h4>
+      </div>
+      <div class="modal-body">
+        <p>Please enter your username and password</p>
+        <form class="">
+          <input id="kerberos-username" type="text" placeholder="Username" class="form-control" />
+          <input id="kerberos-password" type="password" placeholder="Password" class="form-control" />
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="kerberosCancel" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button id="kerberosLogin" type="button" class="btn btn-success" data-dismiss="modal">Log in</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+    <div id="error-indicator">
+        <div style="float:left; width: 40px">
+            <i class="glyphicon glyphicon-warning-sign" style="float:left; width: 40px;"></i>
+        </div>
+        <div style="float:right;">
+            <a class="glyphicon glyphicon-remove" href="#" onclick="$('#error-indicator').hide(); return false;"></a>
+        </div>
+        <div class="headline">This app has experienced an error</div>
+        <div class="message">Click for more information</div>
+        <pre class="output">H</pre>
+        <div style="clear:both"></div>
+    </div>
+
+  <script src="https://anvil.works/ide/bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js?buildTime=1573638946"></script>
+
+
+  <script src="https://anvil.works/ide/bower_components/bootstrap/dist/js/bootstrap.min.js?buildTime=1573638946"></script>
+  <script src="https://anvil.works/ide/bower_components/moment/min/moment.min.js?buildTime=1573638946"></script>
+  <script src="https://anvil.works/ide/bower_components/moment-timezone/builds/moment-timezone-with-data-2012-2022.min.js?buildTime=1573638946"></script>
+  <script src="https://anvil.works/runtime/js/lib/daterangepicker.js?buildTime=1573638946"></script>
+  <script src="https://anvil.works/ide/bower_components/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js?buildTime=1573638946"></script>
+
+  <script src="https://anvil.works/ide/js/lib/js-yaml.min.js?buildTime=1573638946"></script>
+  <script src="https://anvil.works/runtime/js/lib/mutationobserver.min.js?buildTime=1573638946"></script>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    function gm_authFailure(e) { window.googleMapsAuthFailure = true; };
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn8yc8dmMNcmAn-e_K5HT7NX19csXUGUA&v=3&libraries=geometry"></script>
+
+  <script src="https://anvil.works/ide/js/lib/js-yaml.min.js?buildTime=1573638946"></script>
+
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+
+
+  <script src='https://anvil.works/runtime/js/lib/skulpt.min.js?buildTime=1573638946'></script>
+  <script src='https://anvil.works/runtime/js/lib/skulpt-stdlib.js?buildTime=1573638946'></script>
+
+  <script src="https://anvil.works/runtime/js/runner.bundle.js?buildTime=1573638946"></script>
+
+  <script>
+      window.anvilCDNOrigin = "https://anvil.works";
+      window.anvilIDEOrigin = "https://anvil.works";
+      window.anvilAppOrigin = "https://fv45wbclcmatc43w.anvil.app";
+      window.anvilSessionId = "pc5t42lgfmuqlrbwqy4hch4v";
+      window.anvilVersion = "43e6b62b0d963f03aedab967cb9d614eede37102";
+      window.anvilAppInfo = {"id":"FV45WBCLCMATC43W","branch":"master"};
+
+      // We need this if we require an access key to load the 
+      // app in the first place, in case the websocket has to 
+      // reconnect (or we have to reload) after session expiry.
+      window.anvilAppAccessKey = "WWYGUS5BR2Y7UECKTXONYME5"; 
+
+
+      // TODO: We will need to preserve things other than ?s= at some point.
+      window.history.replaceState({}, "Anvil App", document.location.origin + document.location.pathname + document.location.hash);
+
+      // 
+$(function() {var anvilServicePreloadModules=[];Sk.builtinFiles.files["anvil-services\/tables\/__init__.py"] = "from anvil.tables import *\nfrom anvil.tables import _page_size\n";Sk.builtinFiles.files["anvil-services\/anvil\/tables\/__init__.py"] = "import anvil.server\nimport time, random\n\n# Hack: Force ourselves into the top-level package, even\n# if we were loaded into a runtime-v1 per-app Anvil package\n__package__ = \"anvil.tables\"\n__name__ = \"anvil.tables\"\n\nclass AppTables:\n\tcache = None\n\n\tdef __getattr__(self, name):\n\t\tif AppTables.cache is None:\n\t\t\tAppTables.cache = anvil.server.call(\"anvil.private.tables.get_app_tables\")\n\n\t\ttbl = AppTables.cache.get(name)\n\t\tif tbl is not None:\n\t\t\treturn tbl\n\n\t\traise AttributeError(\"No such app table: '%s'\" % name)\n\n\tdef __setattr__(self, name, val):\n\t\traise Exception(\"app_tables is read-only\")\n\n\napp_tables = AppTables()\n\n\n#!defClass(anvil.tables,TableError)!:\nclass TableError(anvil.server.AnvilWrappedError):\n\tpass\n\n\n#!defClass(anvil.tables,TransactionConflict,anvil.tables.TableError)!:\nclass TransactionConflict(TableError):\n\tpass\n\n\n#X NOT AUTOCOMPLETED defClass(anvil.tables,QuotaExceededError,anvil.tables.TableError)!:\nclass QuotaExceededError(TableError):\n\tpass\n\n\nanvil.server._register_exception_type(\"anvil.tables.TransactionConflict\", TransactionConflict)\nanvil.server._register_exception_type(\"anvil.tables.TableError\", TableError)\nanvil.server._register_exception_type(\"anvil.tables.QuotaExceededError\", QuotaExceededError)\n\n\nclass Transaction:\n\tdef __init__(self):\n\t\tself._aborting = False\n\n\t#!defMethod(anvil.tables.Transaction instance)!2: \"Begin the transaction\" [\"__enter__\"]\n\tdef __enter__(self):\n\t\tanvil.server.call(\"anvil.private.tables.open_transaction\")\n\t\treturn self\n\n\t#!defMethod(_)!2: \"End the transaction\" [\"__exit__\"]\n\tdef __exit__(self, e_type, e_val, tb):\n\t\tanvil.server.call(\"anvil.private.tables.close_transaction\", self._aborting or e_val is not None)\n\n\t#!defMethod(_)!2: \"Abort this transaction. When it ends, all write operations performed during it will be cancelled\" [\"abort\"]\n\tdef abort(self):\n\t\tself._aborting = True\n#!defClass(anvil.tables,Transaction)!:\n\n\ndef in_transaction(f):\n\tdef new_f(*args, **kwargs):\n\t\tn = 0\n\t\twhile True:\n\t\t\ttry:\n\t\t\t\twith Transaction():\n\t\t\t\t\treturn f(*args, **kwargs)\n\t\t\texcept TransactionConflict:\n\t\t\t\tn += 1\n\t\t\t\tif n == 8:\n\t\t\t\t\traise\n\t\t\t\t# Max total sleep time is a little under 12.8 seconds (avg 6.4)\n\t\t\t\tsleep_amt = random.random() * (2**n) * 0.05\n\t\t\t\ttry:\n\t\t\t\t\ttime.sleep(sleep_amt)\n\t\t\t\texcept:\n\t\t\t\t\tanvil.server.call(\"anvil.private._sleep\", sleep_amt)\n\n\ttry:\n\t\treregister = f._anvil_reregister\n\texcept AttributeError:\n\t\tpass\n\telse:\n\t\treregister(new_f)\n\n\tnew_f.__name__ = f.__name__\n\n\treturn new_f\n\n#!defFunction(anvil.tables,_,column_name,ascending=)!2: \"Sort the results of this table search by a particular column. Default to ascending order.\" [\"order_by\"]\nclass order_by(anvil.server.Serializable):\n\tdef __init__(self, column_name, ascending=True):\n\t\tself.column_name = column_name\n\t\tself.ascending = ascending\norder_by = anvil.server.serializable_type(order_by)\n\nclass _page_size(anvil.server.Serializable):\n\tdef __init__(self, rows):\n\t\tself.rows = rows\n_page_size = anvil.server.serializable_type(_page_size)\n\n\n";Sk.builtinFiles.files["anvil-services\/anvil\/tables\/query.py"] = "from anvil.server import Serializable, serializable_type\n\n# Hack: Force ourselves into the top-level package, even\n# if we were loaded into a runtime-v1 per-app Anvil package\n__package__ = \"anvil.tables\"\n__name__ = \"anvil.tables.query\"\n\n#!defFunction(anvil.tables.query,_,pattern)!2: \"Match values using a case-sensitive LIKE query, using the % wildcard character.\" [\"like\"]\n@serializable_type\nclass like(Serializable):\n    def __init__(self, pattern):\n        self.pattern = pattern\n\n#!defFunction(anvil.tables.query,_,pattern)!2: \"Match values using a case-insensitive ILIKE query, using the % wildcard character.\" [\"ilike\"]\n@serializable_type\nclass ilike(Serializable):\n    def __init__(self, pattern):\n        self.pattern = pattern\n\n#!defFunction(anvil.tables.query,_,value)!2: \"Match values greater than the provided value.\" [\"greater_than\"]\n@serializable_type\nclass greater_than(Serializable):\n    def __init__(self, value):\n        self.value = value\n\n#!defFunction(anvil.tables.query,_,value)!2: \"Match values less than the provided value.\" [\"less_than\"]\n@serializable_type\nclass less_than(Serializable):\n    def __init__(self, value):\n        self.value = value\n\n#!defFunction(anvil.tables.query,_,value)!2: \"Match values greater than or equal to the provided value.\" [\"greater_than_or_equal_to\"]\n@serializable_type\nclass greater_than_or_equal_to(Serializable):\n    def __init__(self, value):\n        self.value = value\n\n#!defFunction(anvil.tables.query,_,value)!2: \"Match values less than or equal to the provided value.\" [\"less_than_or_equal_to\"]\n@serializable_type\nclass less_than_or_equal_to(Serializable):\n    def __init__(self, value):\n        self.value = value\n\n#!defFunction(anvil.tables.query,_,min,max,[min_inclusive=True],[max_inclusive=False])!2: \"Match values between the provided min and max, optionally inclusive.\" [\"between\"]\ndef between(min, max, min_inclusive=True, max_inclusive=False):\n    return all_of(\n        greater_than_or_equal_to(min) if min_inclusive else greater_than(min),\n        less_than_or_equal_to(max) if max_inclusive else less_than(max)\n    )\n\n#!defFunction(anvil.tables.query,_,query,[raw=False])!2: \"Match values that match the provided full-text search query.\" [\"full_text_match\"]\n@serializable_type\nclass full_text_match(Serializable):\n    def __init__(self, query, raw=False):\n        self.query = query\n        self.raw = raw\n\n#!defFunction(anvil.tables.query,_,*query_expressions)!2: \"Match all query parameters given as arguments and keyword arguments\" [\"all_of\"]\n@serializable_type\nclass all_of(Serializable):\n    def __init__(self, *args, **kwargs):\n        self.args = args\n        self.kwargs = kwargs\n\n#!defFunction(anvil.tables.query,_,*query_expressions)!2: \"Match any query parameters given as arguments and keyword arguments\" [\"any_of\"]\n@serializable_type\nclass any_of(Serializable):\n    def __init__(self, *args, **kwargs):\n        self.args = args\n        self.kwargs = kwargs\n\n#!defFunction(anvil.tables.query,_,*query_expressions)!2: \"Match none of the query parameters given as arguments and keyword arguments\" [\"none_of\"]\n@serializable_type\nclass none_of(Serializable):\n    def __init__(self, *args, **kwargs):\n        self.args = args\n        self.kwargs = kwargs\n\n#!defFunction(anvil.tables.query,_,*query_expressions)!2: \"Match none of the query parameters given as arguments and keyword arguments\" [\"not_\"]\nnot_ = none_of\n\n";window.loadApp({"app":{"allow_embedding":false,"dependency_code":{},"package_name":"BostonHacks2019","modules":[{"name":"Module1","code":"import anvil.tables as tables\nimport anvil.tables.query as q\nfrom anvil.tables import app_tables\nimport anvil.server\n# This is a module.\n# You can define variables and functions here, and use them from any form. For example:\n#\n#    import Module1\n#\n#    Module1.say_hello()\n#\n\n"}],"name":"BostonHacks2019","startup_form":"Form1","dependency_order":[],"theme":{"html":{"dashboard.html":"<!--<link href=\"_\/theme\/dashboard.css\" rel=\"stylesheet\">-->\n<style>\n.sidebar {\n    background-color: #333;\n    color: white;\n    padding: 10px 0;\n    flex-shrink: 0;\n\n    overflow-y: auto;\n    overflow-x: hidden;\n}\n\n.sidebar .placeholder {\n    text-align: center;\n}\n\n.sidebar-elt::first {\n    border-top: 1px solid #888;\n}\n\n.sidebar-elt {\n    position: relative;\n    border-bottom: 1px solid #888;\n}\n\n.sidebar-elt .drop-here {\n    position: absolute;\n    top: -8px;\n    left: 0;\n    right: 0;\n    height: 5px;\n}\n\n.sidebar-elt>.content a {\nfont-size: 16px;\ncolor:white;\ntext-transform: uppercase;\n}\n\n.sidebar-elt>.content a:hover {\nbackground: #444;\n}\n\n.sidebar-elt .content a.anvil-component {\n    padding-left: 14px;\n    padding-right: 14px;\n}\n\n.sidebar-elt a {\n    color: #ddd;\n}\n\n.sidebar-elt a:hover, .sidebar-elt a:active {\n    color: white;\n}\n\n\/* Responsive bits: Make the menu overlay the screen\n   (and hidden by default) rather than displacing it\n   on small screens\n*\/\n\n.sidebar.floating {\n    position: absolute;\n    top: 62px;\n    bottom: 0px;\n    left: 0px;\n    z-index: 2;\n}\n\n@media(max-width:767px) {\n    .runner .sidebar {\n        display: none;\n        position: absolute;\n        top: 62px;\n        bottom: 0px;\n        left: 0px;\n        z-index: 12;\n    }\n\n    .runner .sidebar-click-guard {\n        display: none;\n        position: absolute;\n        top: 62px;\n        bottom: 0px;\n        left: 0;\n        right: 0;\n        background-color: #888;\n        opacity: 0.5;\n        z-index: 10;\n    }\n\n    .designer .sidebar {\n        max-width: 30%;\n    }\n\n    .sidebar.floating {\n        top: 62px;\n        z-index: 12;\n    }\n\n}\n\n.structure {\n    position: relative;\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: stretch;\n    min-height: 100vh;\n}\n\n.body {\n    flex-grow: 1;\n  \n    display: flex;\n    flex-direction: row;\n    align-items: stretch;\n}\n  \n.nav {\n    flex: 0 0;\n    flex-basis: auto;\n    flex-basis: content;\n  \n    z-index: 10;\n\n    position: relative;\n    background-color: white;\n    padding: 8px 16px 7px; \/* expect 5px margin *\/\n    min-height: 62px;\n    font-size: 16px;\n    color: #009688; \/* Material Design: \"Teal 500\" *\/\n}\n\n.nav .title, .nav .menu-btn {\n    display: inline-block;\n    vertical-align: top;\n    margin-left: 7px;\n}\n.nav .menu-btn, .nav .title.placeholder {\n    margin-top: 5px;\n    margin-left: 0;\n}\n\n.nav > .menu-btn {\n    color: #333;\n    cursor: pointer;\n    width: 32px;\n    height: 32px;\n    border-radius: 16px;\n    padding: 5px;\n    margin-top: 7px;\n    text-align: center;\n}\n\n.nav > .menu-btn:hover {\n    background-color: #ccc;\n}\n\n.nav-right {\n    float: right;\n    color: #333;\n}\n\n.nav-elt {\n    display: inline-block;\n    vertical-align: top;\n    margin-left: 10px;\n    position: relative;\n}\n\n.nav-elt.placeholder {\n    margin-top: 5px;\n    opacity: 0.8;\n    color: #888;\n    visibility: hidden;\n}\n\nbody.anvil-highlight .nav-elt.placeholder {\n    visibility: visible;\n}\n\n.nav-elt .drop-here {\n    position: absolute;\n    top: 0;\n    left: -7.5px;\n    bottom: 0;\n    width: 5px;\n}\n\n\n.cards {\n    flex-grow: 1;\n\n    font-weight: bold;\n    color: #555;\n    font-size: 24px;\n\n    padding: 24px 16px;\n    max-width: 100%;\n}\n\n\n.designer .anvil-highlight .cards .anvil-container .anvil-container .anvil-container {\n    outline: 1px dashed rgba(0,0,0,0.3)\n}\n\n\n<\/style>\n      \n<script>\nfunction toggleSidebar() {\n    var s = $('.sidebar');\n    if (!s.is(':hidden')) {\n        $('.sidebar-click-guard').hide();\n        s.addClass('floating').animate({left: -s.width()}, {complete: function() { s.hide(); }});\n    } else {\n        $('.sidebar-click-guard').show();\n        s.show().addClass('floating').css('left', '-100%').css('left', -s.width())\n            .animate({left: 0}, {complete: function() { s.removeClass('floating'); }});\n    }\n}\n\n$(function() {\n    $('.sidebar').on(\"click\", function() {\n        if (window.innerWidth <= 767) {\n            toggleSidebar();\n        }\n    });\n    $('.sidebar-click-guard').on(\"click\", toggleSidebar);\n})\n<\/script>\n\n<!-- Put body before nav so that it sits underneath -->\n\n<div class=\"structure\">\n\n  <div class=\"nav\" anvil-drop-redirect=\".title.placeholder, .nav-elt.placeholder, .nav-elt .drop-here\">\n\n    <div class=\"menu-btn\" onclick=\"toggleSidebar();\">\n      <i class=\"fa fa-bars\"><\/i>\n    <\/div>\n\n    <div anvil-if-slot-empty=\"title\" anvil-drop-slot=\"title\" class=\"title placeholder anvil-designer-only\">\n      Drop a title here\n    <\/div>\n    <div anvil-slot=\"title\" class=\"title\"><\/div>\n\n    <div class=\"nav-right\" anvil-drop-redirect=\".nav-elt\">\n      <div anvil-slot-repeat=\"nav-right\" class=\"nav-elt\">\n        <div anvil-drop-here class=\"drop-here\"><\/div>\n      <\/div>\n      <div class=\"nav-elt placeholder anvil-designer-only\" anvil-drop-slot=\"nav-right\">\n        <i class=\"glyphicon glyphicon-plus\"><\/i>\n      <\/div>\n    <\/div>\n\n<\/div>\n  \n<div class=\"body\" anvil-drop-default anvil-drop-container=\">.cards .anvil-container\" anvil-drop-redirect=\">.cards > .placeholder\">\n    <div class=\"sidebar\" anvil-drop-redirect=\">.drop-here\">\n        <div anvil-slot-repeat=\"sidebar\" class=\"sidebar-elt\">\n            <div anvil-drop-here class=\"drop-here\"><\/div>\n            <div anvil-slot class=\"content\"><\/div>\n        <\/div>\n        <div class=\"sidebar-elt anvil-designer-only drop-here\" anvil-drop-slot=\"sidebar\">\n            <div class=\"content placeholder\"><i class=\"glyphicon glyphicon-plus\"><\/i><\/div>\n        <\/div>\n    <\/div>\n    <div class=\"sidebar-click-guard\"><\/div>\n\n    <div class=\"cards anvil-measure-content\">\n        <div anvil-if-slot-empty=\"default\"\n             anvil-drop-slot=\"default\"\n             class=\"placeholder\">\n             \n        <\/div>\n\n        <div anvil-slot=\"default\"><\/div>\n\n\n    <\/div>\n<\/div>\n\n<\/div>\n","single-column.html":"<style>\n  \n  body, html {\n    margin: 0;\n    padding: 0;\n    font-family: \"Helvetica\",\"Arial\",sans-serif;\n  }\n    \n  h1,h2,h3,h4,h5,h6 {\n    font-family: \"Roboto\",\"Helvetica\",\"Arial\",sans-serif;\n  }\n\n  header {\n    font-family: \"Roboto\",\"Helvetica\",\"Arial\",sans-serif;\n    padding: 0px 40px;\n    min-height: 64px;\n    display: flex;\n    flex-wrap: nowrap;\n    align-items: center;\n    justify-content: space-between;\n    background: #f5f5f5;\n  }\n  \n  header>.title {\n    font-size: 20px;\n  }\n  \n  header>.nav-links>span {\n    margin: 0 10px;\n    display: inline-block;\n    position: relative;\n    vertical-align: top;\n  }\n  \n  .ribbon {\n    width: 100%;\n    height: 40vh;\n    background-color: #009688; \/*#3F51B5;*\/\n  }\n  \n  \n  main {\n    margin-top: -35vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    min-height: calc(95vh - 64px);\n  }\n\n  body.anvil-show-banner main {\n    min-height: calc(95vh - 64px - 50px);\n  }\n  \n  main>.cards {\n    width: calc(67% - 16px);\n    max-width: 960px;\n  }\n  \n  @media (max-width: 839px) {\n    main>.cards {\n      width: calc(100% - 16px);\n    }\n  }\n  \n  main>footer {\n    width:100%;\n    background: #424242;\n    padding: 32px 40px;\n    color: #9e9e9e;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n  }\n  \n  main>footer a {\n    color: #9e9e9e;\n  }\n  \n  main>footer>div>span {\n    margin: 0px 10px;\n  }\n  \n  main>footer>.footer-links>span {\n    margin: 0 10px;\n    display: inline-block;\n    position: relative;\n    vertical-align: top;\n  }\n \n  \/* Global overrides *\/\n  \n  .anvil-bs-container {\n    padding: 0;\n  }\n  \n  \/* Designer fixups *\/\n  .designer .ribbon {\n    height: 300px;\n  }\n  .designer main {\n    margin-top: -200px;\n    min-height: 500px;\n  }\n  \n  \/* Designer-specific styles *\/\n  .link-drop-zone {\n    position: absolute;\n    left: -10px;\n    width: 5px;\n    height: 40px;\n  }\n  .new-link {\n    display: inline-block;\n    vertical-align: top;\n    padding: 10px;\n    margin-left: 0 !important;\n    border: 1px dotted #bbb;\n  }\n  [anvil-if-slot-empty=title] {\n    border: 1px dotted #bbb;\n    color: #888;\n    padding: 5px;\n  }\n  .designer .instructions {\n    background: white;\n    margin: 5px;\n    display: inline-block;\n    padding: 10px 10px;\n    border-radius: 10px;\n  }\n  \n<\/style>\n\n\n<div anvil-drop-default anvil-drop-container=\">.cards .anvil-container\" anvil-drop-redirect=\">.cards > .placeholder\">\n  <header anvil-drop-redirect=\">.nav-links [anvil-drop-slot],>.nav-links>span>div.link-drop-zone,>.title>[anvil-drop-here]\">\n    <div class=\"title\" anvil-slot=\"title\">\n      <div class=\"anvil-designer-only\" anvil-if-slot-empty=\"title\" anvil-drop-here>Drop title here<\/div>\n    <\/div>\n    \n    <div class=\"nav-links\" anvil-drop-redirect=\">span>.link-drop-zone,>.anvil-designer-only\">\n      <span anvil-slot-repeat=\"nav-links\">\n        <div class=\"link-drop-zone\" anvil-drop-here><\/div>\n      <\/span>\n      <span class=\"anvil-designer-only new-link\" anvil-drop-slot=\"nav-links\"><i class=\"glyphicon glyphicon-plus\"><\/i><\/span>\n    <\/div>\n  <\/header>\n  <div class=\"ribbon\"><\/div>\n  <main>\n    <div class=\"cards\">\n      \n        <div anvil-if-slot-empty=\"default\"\n             anvil-drop-slot=\"default\"\n             class=\"placeholder\">\n             Drop a ColumnPanel here to add content\n        <\/div>\n\n        <div anvil-slot=\"default\"><\/div>\n\n        <div class=\"text-center\">\n          <div class=\"anvil-designer-only instructions\">\n              <i class=\"fa fa-info-circle\"><\/i> Add\n              <img src=\"https:\/\/anvil.works\/template-assets\/column-panel-icon.png\" style=\"height: 30px; margin-right: -7px; margin-top: -5px\"> Card components to create new cards.\n          <\/div>\n        <\/div>\n\n   <\/div>\n    <footer anvil-drop-redirect=\">.footer-links [anvil-drop-slot],>.footer-links>span>.link-drop-zone\">\n      <div class=\"footer-links\" anvil-drop-redirect=\">span>.link-drop-zone,>.anvil-designer-only\">\n        <span anvil-slot-repeat=\"footer-links-left\">\n          <div class=\"link-drop-zone\" anvil-drop-here><\/div>\n        <\/span>\n        <span class=\"anvil-designer-only new-link\" anvil-drop-slot=\"footer-links-left\"><i class=\"glyphicon glyphicon-plus\"><\/i><\/span>\n      <\/div>\n      <div class=\"footer-links\" anvil-drop-redirect=\">span>.link-drop-zone,>.anvil-designer-only\">\n        <span anvil-slot-repeat=\"footer-links-right\">\n          <div class=\"link-drop-zone\" anvil-drop-here><\/div>\n        <\/span>\n        <span class=\"anvil-designer-only new-link\" anvil-drop-slot=\"footer-links-right\"><i class=\"glyphicon glyphicon-plus\"><\/i><\/span>\n      <\/div>\n    <\/footer>\n  <\/main>\n<\/div>\n"},"color_scheme":{}},"runtime_options":{"version":1},"forms":[{"container":{"type":"HtmlTemplate","properties":{"html":"@theme:single-column.html"}},"components":[{"type":"ColumnPanel","properties":{"col_widths":"{}"},"name":"content_panel","layout_properties":{"slot":"default"},"components":[{"type":"ColumnPanel","properties":{"role":"card","col_widths":"{\"UXGUJH\":24,\"ZRXTQG\":46,\"XKUKUZ\":20,\"QJNZAG\":39,\"QHOXSX\":14,\"QSPPOL\":28,\"YHCSZJ\":34,\"PZHASH\":13,\"SHEUBP\":15,\"MSBMIC\":10,\"KEXJXF\":9,\"HJAFAF\":9,\"DHLNOC\":13,\"LSQCUS\":28,\"GXDYDB\":15}","spacing_above":"small","background":"","wrap_on":"mobile","col_spacing":"none","foreground":"","spacing_below":"small","visible":true,"border":"","tooltip":""},"name":"card_1","layout_properties":{"grid_position":"ZFVNTM,PIQFKC"},"components":[{"type":"Spacer","properties":{"height":32},"name":"spacer_5","layout_properties":{"grid_position":"QVVKDJ,GXDYDB"}},{"type":"Label","properties":{"role":"title","bold":false,"align":"left","spacing_above":"small","background":"","icon":"","underline":false,"font":"","icon_align":"left","foreground":"","spacing_below":"small","visible":true,"border":"","italic":false,"font_size":null,"tooltip":"","text":"Patient Name"},"name":"PName","layout_properties":{"grid_position":"QVVKDJ,UXGUJH"}},{"type":"TextBox","properties":{"role":null,"bold":false,"align":"left","placeholder":"Name","spacing_above":"small","background":"","type":"text","underline":false,"font":"","hide_text":false,"foreground":"","spacing_below":"small","visible":true,"border":"","italic":false,"enabled":true,"font_size":null,"tooltip":"","text":""},"name":"PatientName","layout_properties":{"grid_position":"QVVKDJ,ZRXTQG"}},{"type":"Spacer","properties":{"height":32},"name":"spacer_1","layout_properties":{"grid_position":"QVVKDJ,SHEUBP"}},{"type":"Spacer","properties":{"height":32},"name":"spacer_6","layout_properties":{"grid_position":"KNYOMU,DHLNOC"}},{"type":"Label","properties":{"role":"title","bold":false,"align":"left","spacing_above":"small","background":"","icon":"","underline":false,"font":"","icon_align":"left","foreground":"","spacing_below":"small","visible":true,"border":"","italic":false,"font_size":null,"tooltip":"","text":"Date of Birth                  "},"name":"Pdob","layout_properties":{"col_widths":{},"grid_position":"KNYOMU,XKUKUZ"}},{"type":"DatePicker","properties":{},"name":"date_picker_1","layout_properties":{"grid_position":"KNYOMU,QJNZAG"}},{"type":"Spacer","properties":{"height":32},"name":"spacer_2","layout_properties":{"grid_position":"KNYOMU,PZHASH"}},{"type":"Spacer","properties":{"height":32},"name":"spacer_7","layout_properties":{"grid_position":"WAHWRT,KEXJXF"}},{"type":"Label","properties":{"role":"title","bold":false,"align":"left","spacing_above":"small","background":"","icon":"","underline":false,"font":"","icon_align":"left","foreground":"","spacing_below":"small","visible":true,"border":"","italic":false,"font_size":null,"tooltip":"","text":"Symptoms"},"name":"Psymptoms","layout_properties":{"col_widths":{},"grid_position":"WAHWRT,QHOXSX"}},{"type":"TextArea","properties":{"role":null,"bold":false,"align":"left","placeholder":"Short Description","spacing_above":"small","background":"","underline":false,"font":"","foreground":"","spacing_below":"small","visible":true,"border":"","italic":false,"enabled":true,"auto_expand":false,"font_size":null,"tooltip":"","height":"","text":""},"name":"PsymptomDescription","layout_properties":{"grid_position":"WAHWRT,QSPPOL"},"event_bindings":{"change":"PsymptomDescription_change"}},{"type":"Spacer","properties":{"height":32},"name":"spacer_4","layout_properties":{"grid_position":"WAHWRT,HJAFAF"}},{"type":"Spacer","properties":{"height":32},"name":"spacer_8","layout_properties":{"grid_position":"UKNVVK,LSQCUS"}},{"type":"FileLoader","properties":{"role":null,"bold":false,"file_types":null,"align":"center","spacing_above":"small","file":null,"background":"","icon":"fa:upload","multiple":false,"underline":false,"font":"","icon_align":"left","foreground":"","show_state":true,"files":[],"spacing_below":"small","visible":true,"border":"","italic":false,"enabled":true,"font_size":null,"tooltip":"","text":"Upload"},"name":"file_loader_1","layout_properties":{"grid_position":"UKNVVK,YHCSZJ"}},{"type":"Spacer","properties":{"height":32},"name":"spacer_3","layout_properties":{"grid_position":"UKNVVK,MSBMIC"}},{"type":"Button","properties":{"role":null,"bold":false,"align":"center","spacing_above":"small","background":"#008080","icon":"fa:check-square","underline":false,"font":"","icon_align":"left","foreground":"#ffffff","spacing_below":"small","visible":true,"border":"","italic":false,"enabled":true,"font_size":null,"tooltip":"","text":"Approve"},"name":"firstApproveBtn","layout_properties":{"grid_position":"CVZZGC,UYBEXY"},"event_bindings":{"click":"firstApproveBtn_click"}}]},{"type":"Spacer","properties":{"height":5},"name":"spacer_9","layout_properties":{"grid_position":"LYQCSP,DTTOEN"}},{"type":"ColumnPanel","properties":{"role":"card","col_widths":"{}","spacing_above":"small","background":"","wrap_on":"mobile","col_spacing":"medium","foreground":"","spacing_below":"small","visible":false,"border":"","tooltip":""},"name":"card_2","layout_properties":{"grid_position":"RFMFGG,JVCWAF"},"components":[{"type":"Label","properties":{"role":null,"bold":false,"align":"left","spacing_above":"small","background":"","icon":"","underline":false,"font":"","icon_align":"left","foreground":"","spacing_below":"small","visible":false,"border":"","italic":false,"font_size":null,"tooltip":"","text":"Syphilis"},"name":"label_2","layout_properties":{"grid_position":"ZINKMW,AJWQFJ"}},{"type":"Label","properties":{},"name":"name_P","layout_properties":{"grid_position":"YDWSHG,WOHBGT"}},{"type":"Label","properties":{},"name":"Pdob_field","layout_properties":{"grid_position":"BYSLVA,BQBRAL"}},{"type":"Label","properties":{"role":null,"bold":false,"align":"left","spacing_above":"small","background":"","icon":"","underline":false,"font":"","icon_align":"left","foreground":"","spacing_below":"small","visible":true,"border":"","italic":false,"font_size":null,"tooltip":"","text":"Suggested Tests for "},"name":"Pos_symptons","layout_properties":{"grid_position":"IVBCYS,NSRODG"}},{"type":"Button","properties":{"role":null,"bold":false,"align":"left","spacing_above":"small","background":"","icon":"","underline":false,"font":"","icon_align":"left","foreground":"","spacing_below":"small","visible":false,"border":"","italic":false,"enabled":true,"font_size":null,"tooltip":"","text":"button_1"},"name":"button_1","layout_properties":{"grid_position":"MPFUFC,IVOYCX"},"event_bindings":{"click":"button_1_click","hide":"button_1_hide"}},{"type":"Button","properties":{"role":null,"bold":false,"align":"left","spacing_above":"small","background":"","icon":"","underline":false,"font":"","icon_align":"left","foreground":"","spacing_below":"small","visible":false,"border":"","italic":false,"enabled":true,"font_size":null,"tooltip":"","text":"button_2"},"name":"button_2","layout_properties":{"grid_position":"PJYVSN,MSQYZY"},"event_bindings":{"click":"button_2_click"}},{"type":"Button","properties":{"role":null,"bold":false,"align":"center","spacing_above":"small","background":"#008080","icon":"fa:check-square","underline":false,"font":"","icon_align":"left","foreground":"#ffffff","spacing_below":"small","visible":true,"border":"","italic":false,"enabled":true,"font_size":null,"tooltip":"","text":"Approve"},"name":"firstApproveBtn_copy","layout_properties":{"col_widths":{},"grid_position":"IDPKKT,EWYPLI"},"event_bindings":{"click":"firstApproveBtn_copy_click"}}]}]},{"type":"Label","properties":{"role":"title","bold":false,"align":"left","spacing_above":"small","background":"","icon":"","underline":false,"font":"","icon_align":"left","foreground":"","spacing_below":"small","visible":true,"border":"","italic":false,"font_size":null,"tooltip":"","text":"Medissist"},"name":"dashName","layout_properties":{"slot":"title"}},{"type":"ColumnPanel","properties":{"role":"card","col_widths":"{}","spacing_above":"small","background":"","wrap_on":"mobile","col_spacing":"medium","foreground":"","spacing_below":"small","visible":false,"border":"","tooltip":""},"name":"card_2_copy","layout_properties":{"grid_position":"RFMFGG,JVCWAF"},"components":[{"type":"Label","properties":{},"name":"name_P_copy","layout_properties":{"grid_position":"YDWSHG,WOHBGT"}},{"type":"Label","properties":{},"name":"Pdob_field_copy","layout_properties":{"grid_position":"BYSLVA,BQBRAL"}},{"type":"Label","properties":{"role":null,"bold":false,"align":"left","spacing_above":"small","background":"","icon":"","underline":false,"font":"","icon_align":"left","foreground":"","spacing_below":"small","visible":true,"border":"","italic":false,"font_size":null,"tooltip":"","text":"Suggested Tests for "},"name":"Pos_symptons_copy","layout_properties":{"grid_position":"IVBCYS,NSRODG"}},{"type":"Spacer","properties":{"height":9},"name":"spacer_10","layout_properties":{"grid_position":"MESCFM,YDMEOW"}},{"type":"Label","properties":{"role":"title","bold":false,"align":"left","spacing_above":"small","background":"","icon":"","underline":false,"font":"","icon_align":"left","foreground":"","spacing_below":"small","visible":true,"border":"","italic":false,"font_size":null,"tooltip":"","text":"Doctor Recommended Tests"},"name":"Current","layout_properties":{"grid_position":"CHDBDY,VGRMDN"}},{"type":"Label","properties":{},"name":"test_output","layout_properties":{"grid_position":"EPNUKS,NDXGLA"}},{"type":"Label","properties":{"role":null,"bold":false,"align":"left","spacing_above":"small","background":"","icon":"","underline":false,"font":"","icon_align":"left","foreground":"","spacing_below":"small","visible":false,"border":"","italic":false,"font_size":null,"tooltip":"","text":""},"name":"btn_one_out","layout_properties":{"grid_position":"CIVSCH,LTDQRM"}},{"type":"Button","properties":{"role":null,"bold":false,"align":"center","spacing_above":"small","background":"#008080","icon":"fa:check-square","underline":false,"font":"","icon_align":"left","foreground":"#ffffff","spacing_below":"small","visible":true,"border":"","italic":false,"enabled":true,"font_size":null,"tooltip":"","text":"Save"},"name":"firstApproveBtn_copy_2","layout_properties":{"col_widths":{},"grid_position":"IDPKKT,EWYPLI"},"event_bindings":{"click":"firstApproveBtn_copy_2_click"}}]},{"type":"Spacer","properties":{"height":5},"name":"spacer_9_copy","layout_properties":{"grid_position":"LYQCSP,DTTOEN"}},{"type":"ColumnPanel","properties":{"role":"card","col_widths":"{}","spacing_above":"small","background":"","wrap_on":"mobile","col_spacing":"medium","foreground":"","spacing_below":"small","visible":false,"border":"","tooltip":""},"name":"card_3","layout_properties":{"grid_position":"CPIIKY,DFGVLT","slot":"default"},"components":[{"type":"Label","properties":{"role":"title","bold":false,"align":"center","spacing_above":"small","background":"","icon":"","underline":false,"font":"","icon_align":"left","foreground":"","spacing_below":"small","visible":true,"border":"","italic":true,"font_size":null,"tooltip":"","text":"Patient Data saved!"},"name":"label_1","layout_properties":{"grid_position":"HISZFU,NUKOXX"}}]}],"class_name":"Form1","code":"from anvil import *\nimport anvil.tables as tables\nimport anvil.tables.query as q\nfrom anvil.tables import app_tables\nimport anvil.server\nimport datetime\n\nclass Form1(Form1Template):\n  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n    self.init_components(**properties)\n    \n    # Any code you write here will run when the form opens.\n\n  def PatientName_copy_pressed_enter(self, **event_args):\n    \"\"\"This method is called when the user presses Enter in this text box\"\"\"\n    pass\n\n  def PatientDOBtextBox_copy_pressed_enter(self, **event_args):\n    \"\"\"This method is called when the user presses Enter in this text box\"\"\"\n    pass\n  def file_loader_1_change (self, file, **event_args):\n    # This method is called when a new file is loaded into this FileLoader\n    x = anvil.server.call(\"get_file\",file)\n    img1.source = file\n    \n  def firstApproveBtn_click(self, **event_args):\n    \"\"\"This method is called when the button is clicked\"\"\"\n\n    self.name_P.text = \"Name: \" + self.PatientName.text\n    \n    z = self.date_picker_1.date\n    \n    self.Pdob_field.text = \"DOB: \" + z.strftime('%m\/%d\/%Y')\n    x = self.PsymptomDescription.text\n    y = self.label_2.text\n    if self.file_loader_1.file:\n      d = self.file_loader_1.file.get_bytes()\n      \n      if \"Syphilis\" in y:\n        self.Pos_symptons.text = \"Suggested tests: \"\n        self.button_1.text = \"Capillary whole blood: Combined antibodies to T. pallidum and to HIV-1\/2 (anti-HIV)\"\n        self.button_2.text = \"Capillary whole blood: Antibodies to Treponema pallidum\"\n        self.button_2.visible = True\n        self.button_1.visible = True\n      elif \"HIV\" in y:\n        self.Pos_symptons.text = \"Suggested tests: \"\n        self.button_1.text = \"Combined HIV antibody\"\n        self.button_2.text = \"p24 antigen (antiHIV\/p24 Ag) test\"\n        self.button_2.visible = True\n        self.button_1.visible = True\n      elif \"Tuberculosis\" in y:\n        self.Pos_symptons.text = \"Suggested tests: \"\n        self.button_1.text = \"Microscopy for Mycobacterium Tuberculosis Bacteria\"\n        self.button_2.text = \"Intradermal Skin Test (TST) for Immune Response\"\n        self.button_2.visible = True\n        self.button_1.visible = True\n    else:\n      \n      if \"Syphilis\" in y:\n        self.Pos_symptons.text = \"Suggested tests: \"\n        self.button_1.text = \"Capillary whole blood: Combined antibodies to T. pallidum and to HIV-1\/2 (anti-HIV)\"\n        self.button_2.text = \"Capillary whole blood: Antibodies to Treponema pallidum\"\n        self.button_2.visible = True\n        self.button_1.visible = True\n      if \"HIV\" in y:\n        self.Pos_symptons.text = \"Suggested tests: \"\n        self.button_1.text = \"Combined HIV antibody\"\n        self.button_2.text = \"p24 antigen (antiHIV\/p24 Ag) test\"\n        self.button_2.visible = True\n        self.button_1.visible = True\n      if \"Tuberculosis\" in y:\n        self.Pos_symptons.text = \"Suggested tests: \"\n        self.button_1.text = \"Microscopy for Mycobacterium Tuberculosis Bacteria\"\n        self.button_2.text = \"Intradermal Skin Test (TST) for Immune Response\"\n        self.button_2.visible = True\n        self.button_1.visible = True\n    \n    self.card_2.visible = True\n    pass\n\n  \n  def button_1_click(self, **event_args):\n   \n    \"\"\"This method is called when the button is clicked\"\"\"\n    y = self.label_2.text\n    #y = self.file_loader_1.file.get_bytes()\n    if \"Syphilis\" in y:\n      self.btn_one_out.text = \"\\nCapillary whole blood: Combined antibodies to T. pallidum and to HIV-1\/2 (anti-HIV)\"\n      \n    elif \"HIV\" in y:\n      self.btn_one_out.text = \"\\nCombined HIV antibody\"\n      \n    elif \"Tuberculosis\" in y:\n      self.btn_one_out.text = \"\\nMicroscopy for Mycobacterium Tuberculosis Bacteria\"\n    \n    self.button_1.visible = False\n    pass\n  \n  def button_2_click(self, **event_args):\n    y = self.label_2.text\n    #y = self.file_loader_1.file.get_bytes()\n    \"\"\"This method is called when the button is clicked\"\"\"\n    if \"Syphilis\" in y:\n      self.btn_one_out.text += \"\\nCapillary whole blood: Antibodies to Treponema pallidum\"\n      \n    elif \"HIV\" in y:\n      self.btn_one_out.text += \"\\np24 antigen (antiHIV\/p24 Ag) test\"\n      \n    elif \"Tuberculosis\" in y:\n      self.btn_one_out.text += \"\\nIntradermal Skin Test (TST) for Immune Response\"\n    self.button_2.visible = False\n    pass\n  \n  def firstApproveBtn_copy_click(self, **event_args):\n    \"\"\"This method is called when the button is clicked\"\"\"\n    self.name_P_copy.text = \"Name: \" + self.PatientName.text\n    \n    z = self.date_picker_1.date\n    x = self.PsymptomDescription.text\n    self.Pdob_field_copy.text = \"DOB: \" + z.strftime('%m\/%d\/%Y')\n    self.Pos_symptons_copy.text = \"Symptons: \" + x\n    \n    self.test_output.text = self.btn_one_out.text\n    self.card_2_copy.visible = True\n    pass\n  \n    \n\n  def firstApproveBtn_copy_2_click(self, **event_args):\n    \"\"\"This method is called when the button is clicked\"\"\"\n    self.card_3.visible = True\n   # people_called_dave = URLMedia(\"https:\/\/drive.google.com\/file\/d\/1R6QYaOlRuCrBvkbF8q40ri6p6Zs8wbG3\/view?usp=sharing\")\n    #download(people_called_dave)\n    \n    pass\n\n  def PsymptomDescription_change(self, **event_args):\n    \"\"\"This method is called when the text in this text area is edited\"\"\"\n\n    pass\n\n\n\n\n\n\n\n\n\n  \n\n\n"}],"services":[{"source":"\/runtime\/services\/tables.yml","client_config":{}}]},"appId":"FV45WBCLCMATC43W","appOrigin":"https:\/\/fv45wbclcmatc43w.anvil.app","inIDE":false}, anvilServicePreloadModules)});
+  </script>
+  
+</body>
+</html>
